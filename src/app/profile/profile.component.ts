@@ -46,7 +46,7 @@ export class ProfileComponent implements OnInit {
 
 
   toHome(){
-    document.getElementById("hero").scrollIntoView({behavior:"smooth"});
+    document.getElementById("main").scrollIntoView({behavior:"smooth"});
   }
   toService(){
     document.getElementById("services").scrollIntoView({behavior:"smooth"})
