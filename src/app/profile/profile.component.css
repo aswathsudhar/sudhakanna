@@ -230,7 +230,7 @@ p {
 /*-----------------------------------SECTION 1-----------------------------------------*/
 
 #hero {
-    background-image: url('/assets/myphoto.jpg');
+    background-image: url('../../assets/myphoto.jpg');
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -512,8 +512,59 @@ p {
     opacity: .7;
 }
 
+.project-desc {
+    width: 100%;
+    color: white;
+    position: absolute;
+    bottom: -50%;
+    left: 45%;
+    opacity: 10;
+    transform: translate(-50%);
+    transition: 1s;
+    z-index: 1;
+}
+
+.project-desc p {
+    color: white;
+    z-index: 1;
+}
+
+#project img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 7px;
+}
+
 #projects .project-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 7px;
     transition: .3s ease transform;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgb(0 0 0 / 0%), #000000);
+    opacity: 0;
+    transition: 1s;
+}
+
+#projects .project-img img:hover .overlay {
+    opacity: 1;
+}
+
+#projects:hover .project-desc {
+    bottom: 20%;
+    opacity: 1;
 }
 
 #projects .project-item:hover .project-img img {
